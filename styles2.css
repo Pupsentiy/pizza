@@ -1,0 +1,162 @@
+body {
+  background-image: url("/assets/img/restoran.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: normal;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 3px solid rgb(255, 255, 255);
+  padding: 0px 0px;
+}
+/* временное решение burger */
+.burger {
+  display: block;
+  position: relative;
+  justify-content: end;
+  justify-content: baseline;
+}
+
+.btn-burger_active{
+  transform: rotate(45deg);
+  
+}
+
+
+.btn-burger{
+  background: url(/assets/img/hamburger.png) center no-repeat;
+  background-size: 100% 100%;
+  width: 60px;
+  height: 50px;
+  
+  border:none;
+  cursor: pointer;
+  
+}
+
+
+.mobile-nav{  
+  display:none;
+  
+  
+}
+  
+ .mobile-nav_active{
+  position: absolute;
+  display: flex;
+  flex-direction:column;
+  transition: 1s ease;
+  transform-origin: left top;
+  transform: scale(1) translatey(0%);
+  background-color: rgb(172, 241, 11);
+  
+  animation: change-background 1s linear alternate;
+} 
+
+
+.item{
+  padding: 0px 8px 0px 8px;
+  border-left: 1px solid rgb(253, 249, 249);
+}
+
+.a {
+  text-decoration: none;
+  color: rgb(0, 110, 255);
+  padding: 0px 8px 0px 8px;
+  border-left: 1px solid rgb(253, 249, 249);
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  padding: 0px 8px 0px 8px;
+}
+
+
+
+.b {
+  color: aliceblue;
+}
+
+.item:first-child {
+  border-left: none;
+}
+.item:last-child {
+  padding-right: 0px;
+}
+.btn {
+  padding: 15px 20px;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: rgb(238, 255, 0);
+  color: rgb(102, 0, 88);
+}
+
+.text-center {
+  border-top: 3px solid rgb(255, 255, 255);
+}
+
+img {
+  width: 100%;
+  background-size: cover;
+  border-radius: 30px;
+  box-shadow: 5px 5px 15px rgb(0, 0, 0);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.img-wrapper {
+  display: flex;
+}
+@media (max-width: 992px) {
+  .a {
+    border-left: none;
+  }
+}
+@media (max-width: 576px) {
+  
+  .header-nav {
+    display: none;
+  }
+
+  .description-text {
+    font-size: 10px;
+  }
+  .a {
+    border-left: none;
+  }
+}
+@media (min-width: 576px) {
+.burger{
+  display: none;
+}
+}
+
+
+
+@keyframes change-background {
+  0% {
+    background: blue;
+    top: 0px;
+    opacity: 0;
+  }
+
+  50% {
+    background: orange;
+    top: 50px;
+    opacity: 0.5;
+  }
+  100% {
+    background: green;
+    top: 100px;
+    opacity:1;
+  }
+}
